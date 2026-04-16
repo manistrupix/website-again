@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corazón Coffee Bar | Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CORAZÓN<span class="heart-icon">♥</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="order.html">Order</a>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1495474472201-4ae70f41170b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+        <h2>Our Menu</h2>
+        <p>Curated Offerings</p>
+    </header>
+
+    <section class="content-section">
+        <div class="menu-gallery">
+            <div class="menu-item"><img src="cafedeolla.png" class="zoomable-image"><div class="menu-label">Café de Olla</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1558401402-28e44ebf4db4?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Horchata Latte</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">The Cortado</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1461023058943-07cb1ce8db13?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Oat Flat White</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Black Espresso</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Mocha Picante</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Iced Americano</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Matcha Reserve</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Churros</div></div>
+            <div class="menu-item"><img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3" class="zoomable-image"><div class="menu-label">Tres Leches</div></div>
+        </div>
+    </section>
+
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer>
+        <div class="footer-logo">CORAZÓN</div>
+        <div class="footer-text">© 2026 Corazón Coffee Bar</div>
+    </footer>
+
+    <script>
+        // Modal Zoom Logic
+        var modal = document.getElementById("imgModal");
+        var modalImg = document.getElementById("img01");
+        var images = document.querySelectorAll(".zoomable-image");
+        images.forEach(img => { img.onclick = function(){ modal.style.display = "block"; modalImg.src = this.src; } });
+        document.querySelector(".close").onclick = function() { modal.style.display = "none"; }
+        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+    </script>
+</body>
+</html>
