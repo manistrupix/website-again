@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corazón Coffee Bar | Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CORAZÓN<span class="heart-icon">♥</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="order.html">Order</a>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+        <h2>Reserve & Order</h2>
+        <p>Skip The Line</p>
+    </header>
+
+    <section class="content-section alt-bg">
+        <form class="order-form" onsubmit="event.preventDefault(); alert('Order Submitted! (Demo)');">
+            <label>Name</label>
+            <input type="text" placeholder="Your Name" required>
+            
+            <label>Select Item</label>
+            <select required>
+                <option value="olla">Café de Olla</option>
+                <option value="horchata">Horchata Latte</option>
+                <option value="cortado">The Cortado</option>
+            </select>
+
+            <label>Special Requests</label>
+            <textarea rows="4" placeholder="Oat milk, extra shot, etc..."></textarea>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">CORAZÓN</div>
+        <div class="footer-text">© 2026 Corazón Coffee Bar</div>
+    </footer>
+</body>
+</html>
