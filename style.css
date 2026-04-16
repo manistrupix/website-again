@@ -144,17 +144,7 @@ nav {
 .close { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
 .close:hover { color: #bbb; }
 
-/* --- FOOTER --- */
-footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 1rem; color: var(--copper); }
-.footer-text { font-size: 0.75rem; letter-spacing: 2px; color: #666; text-transform: uppercase; }
-
-@media (max-width: 900px) {
-    .nav-links { display: none; }
-    .page-header.hero h1 { font-size: 4rem; letter-spacing: 10px; }
-    .hero-text-box { padding: 2rem; }
-    .image-grid-3, .menu-gallery, .reviews-grid { grid-template-columns: 1fr; }
-/* --- NEW HERO SLIDESHOW --- */
+/* --- NEW HERO SLIDESHOW (Home Auto-Rotation) --- */
 .hero-slider-container {
     position: relative;
     height: 100vh;
@@ -171,16 +161,16 @@ footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    transition: opacity 1s ease-in-out; 
     z-index: 1;
 }
 .hero-slide::before {
     content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay so text is readable */
+    background: rgba(0, 0, 0, 0.6); 
 }
 .hero-slider-container .hero-text-box {
     position: relative;
-    z-index: 10; /* Keeps the text box above the changing images */
+    z-index: 10; 
 }
 
 /* --- FEATURES GRID (3 Images + Text) --- */
@@ -209,17 +199,14 @@ footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-
     text-align: center;
 }
 
-@media (max-width: 900px) {
-    .features-grid { grid-template-columns: 1fr; }
-}
 /* --- TOCA MADERA EDITORIAL BLOCKS (About Page) --- */
 .editorial-block {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--bg-dark);
-    padding: 6rem 10%; /* Adds breathing room around the edges */
-    gap: 5rem; /* Adds space directly between the image and text */
+    padding: 6rem 10%; 
+    gap: 5rem; 
 }
 .editorial-block:nth-of-type(even) {
     flex-direction: row-reverse;
@@ -227,11 +214,11 @@ footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-
 }
 .editorial-img {
     flex: 1;
-    max-width: 450px; /* Sizes down the image width */
-    height: 55vh; /* Sizes down the image height */
+    max-width: 450px; 
+    height: 55vh; 
     overflow: hidden;
-    border-radius: 4px; /* Slight rounding for a premium feel */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6); /* Makes the smaller image pop off the background */
+    border-radius: 4px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
 }
 .editorial-img img {
     width: 100%;
@@ -249,7 +236,7 @@ footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Guarantees the text is perfectly centered */
+    align-items: center; 
     text-align: center;
 }
 .editorial-text h3 {
@@ -266,8 +253,24 @@ footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-
     margin: 0 auto 1.5rem auto;
 }
 
-/* Mobile Adjustments */
+/* --- FOOTER --- */
+footer { background-color: #000; text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 1rem; color: var(--copper); }
+.footer-text { font-size: 0.75rem; letter-spacing: 2px; color: #666; text-transform: uppercase; }
+
+
+/* --- MOBILE RESPONSIVENESS (All combined) --- */
 @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .page-header.hero h1 { font-size: 4rem; letter-spacing: 10px; }
+    .hero-text-box { padding: 2rem; }
+    
+    /* Convert all grids to a single column on mobile */
+    .image-grid-3, .menu-gallery, .reviews-grid, .features-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Mobile adjustments for the About page editorial blocks */
     .editorial-block {
         flex-direction: column;
         padding: 4rem 5%;
