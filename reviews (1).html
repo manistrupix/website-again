@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corazón Coffee Bar | Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .gallery-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Makes it responsive for mobile devices */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">CORAZÓN<span class="heart-icon">♥</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="order.html">Order</a>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+        <h2>Testimonials</h2>
+        <p>From Our Valued Guests</p>
+    </header>
+
+    <section class="content-section">
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Corazón Coffee Bar is an absolute gem. The ambiance is breathtaking, and the Horchata Latte is a masterpiece."</p>
+                <p class="review-author">— Isabella M.</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Finally, a coffee bar that understands luxury. Every detail, from the copper accents to the perfect espresso, speaks of quality."</p>
+                <p class="review-author">— Julian R.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"The Mexican Mocha here is unmatched. It has just the right amount of spice, and the guava pastries are incredibly fresh. My new favorite weekend spot."</p>
+                <p class="review-author">— Elena V.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★☆</div>
+                <p class="review-text">"Beautiful aesthetic and fantastic service. The baristas are truly artisans. It gets a bit crowded on Sunday mornings, but the single-origin pour-over is absolutely worth the wait."</p>
+                <p class="review-author">— Marcus T.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"I love bringing my clients here for meetings. The atmosphere is sophisticated yet warm, and the Dulce de Leche Macchiato is always a crowd-pleaser."</p>
+                <p class="review-author">— Sofia C.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Hands down the best cold brew I've had in the city. Perfectly smooth with zero bitterness. The outdoor seating area is a dream on a sunny afternoon."</p>
+                <p class="review-author">— David L.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Barista pouring latte art" class="gallery-img">
+            
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corazón Coffee Bar interior" class="gallery-img">
+            
+            <img src="https://images.unsplash.com/photo-1600336153113-d66c79ab3fa1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh coffee beans and pastries" class="gallery-img">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">CORAZÓN</div>
+        <div class="footer-text">© 2026 Corazón Coffee Bar</div>
+    </footer>
+</body>
+</html>
