@@ -4,6 +4,37 @@
     <meta charset="UTF-8">
     <title>Corazón Coffee Bar | Reviews</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .gallery-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Makes it responsive for mobile devices */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -59,6 +90,16 @@
                 <p class="review-text">"Hands down the best cold brew I've had in the city. Perfectly smooth with zero bitterness. The outdoor seating area is a dream on a sunny afternoon."</p>
                 <p class="review-author">— David L.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Barista pouring latte art" class="gallery-img">
+            
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corazón Coffee Bar interior" class="gallery-img">
+            
+            <img src="https://images.unsplash.com/photo-1600336153113-d66c79ab3fa1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh coffee beans and pastries" class="gallery-img">
         </div>
     </section>
 
